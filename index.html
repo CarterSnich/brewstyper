@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>BrewStyper</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<main>
+		<section id="main" autofocus>
+			<div id="hud">
+				<div>time:&nbsp;<span id="time-display">0ms</span></div>
+				<button type="button" id="random-phrase">random phrase</button>
+			</div>
+			<div id="typer" tabindex="1" type="text">
+				<div id="text" class="0"></div>	
+			</div>
+		</section>
+		<section id="results">
+			<table>
+				<tr>
+					<td>duration: </td>
+					<td id="duration"></td>
+				</tr>
+				<tr>
+					<td>character count: </td>
+					<td id="character-count"></td>
+				</tr>
+				<tr>
+					<td>correct count: </td>
+					<td id="correct-count"></td>
+				</tr>
+				<tr>
+					<td>mistake count: </td>
+					<td id="mistake-count"></td>
+				</tr>
+				<tr>
+					<td>accuracy: </td>
+					<td id="accuracy"></td>
+				</tr>
+			</table>
+			
+			<button type="button" id="play-again" disabled>play again</button>
+		
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>

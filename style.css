@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	height: 100vh;
+	
+	font-family: monospace;
+	font-size: 1.75rem
+}
+
+button {
+	font-family: inherit;
+	font-size: 1rem;
+	max-width: fit-content;
+	padding: .25rem 1.75rem;
+}
+
+main {
+	transition: transform 300ms ease-in-out;
+}
+
+main.show-results {
+	transform: translateY(-50%);
+}
+
+#main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+	padding: 10rem;
+	box-sizing: border-box;
+}
+
+#hud {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#random-phrase {
+}
+
+#typer {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+#typer:focus {
+	outline: none;
+}
+
+#text {
+	text-align: center;
+}
+
+#text > span {
+	white-space: break-spaces;
+}
+
+@keyframes blinking {
+	0% {
+		border-bottom-color: black;		
+	}
+	100% {
+		border-bottom-color: white;		
+	}
+}
+
+#typer:focus #text > span.current {
+	border-bottom: 3px solid black;
+	animation: blinking infinite alternate 500ms;
+}
+
+
+#text > span.correct {
+		background-color: green;
+}
+
+#text > span.wrong {
+	background-color: red;
+}
+
+#results {
+	display: grid;
+	place-content: center;
+}
+
+
+table tr > td:nth-child(1) {
+	border-right: 5rem solid transparent;
+}
+
+table tr > td:nth-child(2) {
+	text-align: right;	
+}
+
+#play-again {
+	margin: auto;
+	margin-top: 1.75rem;
+}
